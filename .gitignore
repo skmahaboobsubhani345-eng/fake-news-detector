@@ -1,4 +1,6 @@
 .venv/
 __pycache__/
 *.pyc
+*.pkl
 .env
+WELFake_Dataset.csv

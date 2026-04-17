@@ -150,6 +150,22 @@ def extract_features(text):
 # ══════════════════════════════════════════════════════════════
 # LOAD DATASET  (pure csv — no pandas, no pyarrow conflicts)
 # ══════════════════════════════════════════════════════════════
+import os
+import urllib.request
+import zipfile
+
+def download_dataset():
+    """Auto-download WELFake dataset if not present."""
+    if not os.path.exists('WELFake_Dataset.csv'):
+        print("  Downloading WELFake dataset...")
+        # Download from Kaggle via public mirror
+        url = "https://huggingface.co/datasets/fakem7/WELFake/resolve/main/WELFake_Dataset.csv"
+        try:
+            urllib.request.urlretrieve(url, 'WELFake_Dataset.csv')
+            print("  Dataset downloaded successfully!")
+        except Exception as e:
+            print(f"  Download failed: {e}")
+            print("  Please upload WELFake_Dataset.csv manually.")
 
 def load_data(filepath):
     print(f"  Reading: {filepath}")
@@ -363,6 +379,8 @@ def demo_predict(text):
 # ══════════════════════════════════════════════════════════════
 
 if __name__ == '__main__':
+    download_dataset()   # ← ADD THIS LINE
+    import os
     print()
     print("╔══════════════════════════════════════════════════════════╗")
     print("║      Automated Fake News Detection System                ║")
