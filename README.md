@@ -214,13 +214,9 @@ fake-news-detector/
 
 ## 👥 Team
 
-**Team No: 15 — Department of Artificial Intelligence and Machine Learning**
-
-| Name | Roll Number |
-|------|-------------|
-| Shaik Mahaboob Subhani | 11523110068 |
-| Raja Hemanth Sai | 11523110088 |
-| Prujith K | 11523110062 |
+- Shaik Mahaboob Subhani  
+- Raja Hemanth Sai  
+- Prujith K  
 
 **Guide:** R. Sivabalan, Assistant Professor
 
